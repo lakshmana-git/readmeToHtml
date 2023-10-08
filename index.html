@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Display README.md</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
 </head>
 <body>
-    <div id="readme"></div>
-    <script>
-        const readmeUrl = 'https://raw.githubusercontent.com/your-username/your-repo/main/README.md';
-        fetch(readmeUrl)
-            .then(response => response.text())
-            .then(data => {
-                const readmeDiv = document.getElementById('readme');
-                readmeDiv.innerHTML = marked(data); // You might need to include a library like 'marked' to render Markdown as HTML.
-            })
-            .catch(error => console.error('Error:', error));
-    </script>
+    <!-- Use an iframe to display the README.md content -->
+    <iframe src="README.md" frameborder="0" scrolling="auto" width="100%" height="100%"></iframe>
 </body>
 </html>
